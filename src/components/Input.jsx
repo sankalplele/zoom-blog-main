@@ -1,7 +1,7 @@
 import React, { useId, useState } from "react";
 
 const Input = React.forwardRef(function Input(
-  { label, type = "text", className = "", onChange, ...props },
+  { label, type = "text", className = "", ...props },
   ref
 ) {
   const id = useId();
