@@ -46,13 +46,13 @@ function Header() {
               </span>
             </Link>
           </div>
-          <ul className="flex ml-auto">
+          <ul className="flex ml-auto items-center">
             {navItems.map((item) =>
               item.active ? (
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="inline-block sm:px-6 px-2 py-2 duration-200 sm:hover:bg-blue-100 sm:dark:hover:bg-indigo-800 rounded-full"
+                    className="inline-block sm:px-6 px-2 py-2 duration-200 sm:hover:bg-blue-100 sm:dark:hover:bg-indigo-800 rounded-full text-sm sm:text-base"
                   >
                     {item.name}
                   </button>

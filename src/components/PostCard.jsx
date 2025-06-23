@@ -10,11 +10,11 @@ function PostCard({ $id, title, featuredImage }) {
   console.log(imageUrl);
   return (
     <Link to={`/post/${$id}`}>
-      <div className="w-full bg-slate-100 dark:bg-slate-800 rounded-xl p-4 dark:hover:bg-slate-700 hover:bg-slate-200">
+      <div className="w-full bg-blue-50 dark:bg-slate-800 rounded-xl p-4 dark:hover:bg-slate-700 hover:bg-slate-200">
         <div className="w-full justify-center mb-4 aspect-square">
           <div
             title={title}
-            className="bg-cover bg-center rounded-xl w-full h-full"
+            className="bg-cover bg-center rounded-xl w-full h-full "
             style={{
               backgroundImage: `url(${imageUrl})`,
             }}

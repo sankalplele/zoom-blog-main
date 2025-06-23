@@ -18,7 +18,7 @@ function ThemeBtn() {
 
   return (
     <button
-      className="rounded-2xl ml-2 border-slate-500  duration-500 flex justify-center dark:hover:bg-slate-600 hover:bg-slate-200 items-center w-10"
+      className="rounded-2xl ml-2 py-2 border-slate-500  duration-500 flex justify-center dark:hover:bg-slate-600 hover:bg-slate-200 items-center w-10"
       type="submit"
       onClick={themeChangeHandler}
     >

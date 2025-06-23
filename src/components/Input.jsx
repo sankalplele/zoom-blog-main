@@ -6,15 +6,18 @@ const Input = React.forwardRef(function Input(
 ) {
   const id = useId();
   return (
-    <div className="w-full">
+    <div className="w-full flex justify-center items-center">
       {label && (
-        <label className="inline-block mb-1 pl-1" htmlFor={id}>
+        <label
+          className="inline-block basis-1/4 mb-1 mr-4 pl-1 text-left"
+          htmlFor={id}
+        >
           {label}
         </label>
       )}
       <input
         type={type}
-        className={`${className}`}
+        className={`${className} dark:bg-slate-700 bg-slate-200 py-1 px-2 rounded-md`}
         ref={ref}
         {...props}
         id={id}
