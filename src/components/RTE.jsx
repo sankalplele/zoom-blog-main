@@ -15,8 +15,7 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
             apiKey="nbvo4fkj1rpy6tdgf0ih6lqw2bmyolm9sv9drjx1nwj9wb5a"
             initialValue={defaultValue}
             init={{
-              initialValue: defaultValue,
-              height: 500,
+              height: 700,
               menubar: true,
               plugins: [
                 "image",
@@ -24,13 +23,11 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
                 "autolink",
                 "lists",
                 "link",
-                "image",
                 "charmap",
                 "preview",
                 "anchor",
                 "searchreplace",
                 "visualblocks",
-                "code",
                 "fullscreen",
                 "insertdatetime",
                 "media",
@@ -38,7 +35,6 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
                 "code",
                 "help",
                 "wordcount",
-                "anchor",
               ],
               toolbar:
                 "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",

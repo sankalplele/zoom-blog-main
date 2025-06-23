@@ -2,6 +2,7 @@ import React, { useId } from "react";
 
 function Select({ options, label, className = "", ...props }, ref) {
   const id = useId;
+  console.log(options);
   return (
     <div className="w-full">
       {label && <label htmlFor={id} className=""></label>}
@@ -13,11 +14,9 @@ function Select({ options, label, className = "", ...props }, ref) {
       >
         {options?.map((option) => {
           return (
-            <option
-              className="text-blue-500"
-              key={option}
-              value={option}
-            ></option>
+            <option className="text-blue-500" key={option} value={option}>
+              {option}
+            </option>
           );
         })}
       </select>
