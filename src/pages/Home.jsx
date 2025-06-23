@@ -6,15 +6,30 @@ import { Query } from "appwrite";
 
 function Home() {
   const [posts, setPosts] = useState([]);
+  const userData = useSelector((state) => state.auth.userData);
 
   useEffect(() => {
+    if (!userData) return;
+
     appwriteService.getPosts().then((posts) => {
       if (posts) {
-        console.log(posts);
-        setPosts(posts.documents);
+        // Filter posts where post.userId matches the current user
+        const userPosts = posts.documents.filter(
+          (post) => post.userId === userData.$id
+        );
+        setPosts(userPosts);
       }
     });
-  }, []);
+  }, [userData]);
+
+  // useEffect(() => {
+  //   appwriteService.getPosts().then((posts) => {
+  //     if (posts) {
+  //       console.log(posts);
+  //       setPosts(posts.documents);
+  //     }
+  //   });
+  // }, []);
 
   if (posts.length === 0) {
     return (
